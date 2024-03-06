@@ -1,5 +1,9 @@
 # README
 Project objects:
 1. User
-2. Test
-3. Question
+2. Session
+3. Test
+4. Category
+5. Question
+6. Answer
+7. Result
