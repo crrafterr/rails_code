@@ -20,17 +20,17 @@ categories = Category.create!([{ title: 'category_1' },
 users = User.create!([{ name: 'name_1' },
                       { name: 'name_2' }])
 
-tests = Test.create!([{ title: 'test_1', level: 1, category_id: categories[0].id, author_id: users[0].id },
-                      { title: 'test_2', level: 2, category_id: categories[1].id, author_id: users[1].id }])
+tests = Test.create!([{ title: 'test_1', level: 1, category: categories[0], author: users[0] },
+                      { title: 'test_2', level: 2, category: categories[1], author: users[1] }])
 
-questions = Question.create!([{ body: 'question_1', test_id: tests[0].id },
-                              { body: 'question_2', test_id: tests[1].id }])
+questions = Question.create!([{ body: 'question_1', test: tests[0] },
+                              { body: 'question_2', test: tests[1] }])
 
-Answer.create!([{ body: 'answer_1', correct: true, question_id: questions[0].id },
-                { body: 'answer_2', correct: true, question_id: questions[1].id },
-                { body: 'answer_3', correct: false, question_id: questions[0].id },
-                { body: 'answer_4', correct: false, question_id: questions[1].id }])
+Answer.create!([{ body: 'answer_1', correct: true, question: questions[0] },
+                { body: 'answer_2', correct: true, question: questions[1] },
+                { body: 'answer_3', correct: false, question: questions[0] },
+                { body: 'answer_4', correct: false, question: questions[1] }])
 
-Result.create!([{ user_id: users[0].id, test_id: tests[0].id, status: 'started' },
-                { user_id: users[0].id, test_id: tests[1].id, status: 'finished' },
-                { user_id: users[1].id, test_id: tests[0].id, status: 'started' }])
+Result.create!([{ user: users[0], test: tests[0], status: 'started' },
+                { user: users[0], test: tests[1], status: 'finished' },
+                { user: users[1], test: tests[0], status: 'started' }])

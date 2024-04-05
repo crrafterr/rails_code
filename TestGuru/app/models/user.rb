@@ -1,7 +1,9 @@
 class User < ApplicationRecord
+  has_many :results, dependent: :destroy
+  has_many :tests, through: :results, dependent: :destroy
+  has_many :author_for_tests, class_name: 'Test', foreign_key: :author_id, dependent: :destroy
+
   def select_test_by_level(level)
-    Test.joins('INNER JOIN results ON results.test_id = tests.id INNER JOIN users ON users.id = results.user_id')
-        .where('users.id = ?', id)
-        .where('tests.level = ?', level)
+    tests.where(tests: { level: level })
   end
 end
