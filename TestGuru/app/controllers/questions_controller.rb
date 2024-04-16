@@ -16,8 +16,12 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @test.questions.create!(body: params[:question][:body])
-    redirect_to test_questions_path
+    @question = @test.questions.build(question_params)
+    if @question.save
+      redirect_to @question
+    else
+      render :new
+    end
   end
 
   def destroy
@@ -33,6 +37,10 @@ class QuestionsController < ApplicationController
 
   def find_question
     @question = Question.find(params[:id])
+  end
+
+  def question_params
+    params.require(:question).permit(:body)
   end
 
   def rescue_question_not_found
