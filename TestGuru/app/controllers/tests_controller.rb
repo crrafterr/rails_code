@@ -2,9 +2,7 @@ class TestsController < ApplicationController
   before_action :set_test, only: %i[show edit update destroy start]
   before_action :set_user, only: :start
 
-  def show
-    @test = Test.find(params[:id])
-  end
+  def show; end
 
   def index
     @tests = Test.all
@@ -24,13 +22,9 @@ class TestsController < ApplicationController
     end
   end
 
-  def edit
-    @test = Test.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @test = Test.find(params[:id])
-
     if @test.update(test_params)
       redirect_to @test
     else
