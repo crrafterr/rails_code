@@ -7,30 +7,26 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Result.destroy_all
+TestPassage.destroy_all
 Answer.destroy_all
 Question.destroy_all
 Test.destroy_all
 User.destroy_all
 Category.destroy_all
 
-categories = Category.create!([{ title: 'category_1' },
-                               { title: 'category_2' }])
+categories = Category.create!([{ title: 'Ruby' },
+                               { title: 'Python' }])
 
-users = User.create!([{ name: 'name_1' },
-                      { name: 'name_2' }])
+users = User.create!([{ name: 'Mike' },
+                      { name: 'Tom' }])
 
-tests = Test.create!([{ title: 'test_1', level: 1, category: categories[0], author: users[0] },
-                      { title: 'test_2', level: 2, category: categories[1], author: users[1] }])
+tests = Test.create!([{ title: 'Ruby_beginner', level: 1, category: categories[0], author: users[0] },
+                      { title: 'Python_beginner', level: 1, category: categories[1], author: users[1] }])
 
-questions = Question.create!([{ body: 'question_1', test: tests[0] },
-                              { body: 'question_2', test: tests[1] }])
+questions = Question.create!([{ body: 'How to declarete an array in Ruby?', test: tests[0] },
+                              { body: 'How to declarete an array in Python?', test: tests[1] }])
 
-Answer.create!([{ body: 'answer_1', correct: true, question: questions[0] },
-                { body: 'answer_2', correct: true, question: questions[1] },
-                { body: 'answer_3', correct: false, question: questions[0] },
-                { body: 'answer_4', correct: false, question: questions[1] }])
-
-Result.create!([{ user: users[0], test: tests[0], status: 'started' },
-                { user: users[0], test: tests[1], status: 'finished' },
-                { user: users[1], test: tests[0], status: 'started' }])
+Answer.create!([{ body: 'colours = []', correct: true, question: questions[0] },
+                { body: 'colours = Array.new', correct: true, question: questions[0] },
+                { body: 'a = []', correct: true, question: questions[1] },
+                { body: 'a = {}', correct: false, question: questions[1] }])
