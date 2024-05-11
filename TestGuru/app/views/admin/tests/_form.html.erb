@@ -23,7 +23,7 @@
   <p>
     <%= form.label :author_id %>
 
-    <%= form.collection_select :author_id, User.all, :id, :name, prompt: true %>
+    <%= form.collection_select :author_id, User.all, :id, :first_name, prompt: true %>
   </p>
 
   <p><%= form.submit %></p>
