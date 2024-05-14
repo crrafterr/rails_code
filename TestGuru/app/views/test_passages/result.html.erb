@@ -1,10 +1,10 @@
-<h1>The <%= @test_passage.test.title %> Test was Completed!</h1>
+<%= t('.header', title: @test_passage.test.title) %>
 <% if @test_passage.passed? %>
-  Test passed - <b class='success'><%= @test_passage.calculate_percentage %></b>%
+  <%= t('.passed') %> - <b class='success'><%= @test_passage.calculate_percentage %></b>%
 <%else%>
-  Test failed - <b class='fail'><%= @test_passage.calculate_percentage %></b>%
+  <%= t('.failed') %> - <b class='fail'><%= @test_passage.calculate_percentage %></b>%
 <% end %>
 
 <p>
-<%= link_to 'Back', tests_path %>
+<%= link_to t('.back'), tests_path %>
 </p>
