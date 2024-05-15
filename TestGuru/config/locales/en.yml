@@ -31,3 +31,111 @@
 
 en:
   hello: "Hello world"
+  
+  helpers:
+    submit:
+      test:
+        create: "Create Test"
+        update: "Update Test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+      user:
+        first_name: "First name"
+        last_name: "Last name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+    select:
+      prompt: "Select category"
+
+  tests:
+    index:
+      header: "Tricky Tests"
+      title: "Title"
+      level: "Level"
+      count: "Count"
+      actions: "Actions"
+    test:
+      start: "Start"
+
+  test_passages:
+    show:
+      header: "Passing the %{test_name} test"
+      progress: "Question %{current_question_number} out of %{question_count}"
+      submit: "Next"
+    result:
+      header: "Test %{title} was succesfully completed!"
+      passed: "Test passed"
+      failed: "Test failed"
+      back: "Back"
+
+  admin:
+    tests:
+      create:
+        success: "Test was succesfully created."
+      index:
+        header: "Tricky Tests"
+        create: "Create test"
+        title: "Title"
+        level: "Level"
+        count: "Count"
+        actions: "Actions"
+      test:
+        edit: "Edit"
+        show: "Show"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      update:
+        update: "Test was succesfully updated."
+      destroy:
+        delete: "Test was succesfully deleted."
+      edit:
+        header: "Edit test"
+        back: "Back"
+      new:
+        header: "Create new test"
+        back: "Back"
+      show:
+        header: "Test"
+        title: "Title"
+        level: "Level"
+        questions: "Test questions"
+        new_question: "New question"
+        body: "Body"
+        actions: "Actions"
+        back: "Back"
+        edit: "Edit"
+    questions:
+      question:
+        edit: "Edit"
+        show: "Show"
+        delete: "Delete"
+        confirm: "Are you sure?"
+
+  users:
+    registrations:
+      form:
+        characters_minimum: "%{count} characters minimum"
+        registrate: "Sign up"
+      new:
+        header: "Sign up"
+        back: "Back"
+    sessions:
+      form:
+        login: "Log in"
+      new:
+        header: "Log in"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
+      

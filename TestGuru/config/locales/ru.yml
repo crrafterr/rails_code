@@ -31,3 +31,112 @@
 
 ru:
   hello: "Привет мир!"
+  
+  helpers:
+    submit:
+      test:
+        create: "Создать Тест"
+        update: "Обновить Тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+      user:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        email: "Адрес электронной почты"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+    select:
+      prompt: "Выберите категорию"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      count: "Вопросы"
+      actions: "Действия"
+    test:
+      start: "Начать"
+  
+  test_passages:
+    show:
+      header: "Прохождение теста %{test_name}"
+      progress: "Вопрос номер %{current_question_number} из %{question_count}"
+      submit: "Следующий"
+    result:
+      header: "Тест %{title} успешно завершен!"
+      passed: "Тест пройден"
+      failed: "Тест не пройден"
+      back: "Назад"
+  
+  admin:
+    tests:
+      create:
+        success: "Тест был успешно создан."
+      index:
+        header: "Доступные тесты"
+        create: "Создать тест"
+        title: "Название"
+        level: "Уровень"
+        count: "Вопросы"
+        actions: "Действия"
+      test:
+        edit: "Изменить"
+        show: "Показать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      update:
+        update: "Тест был успешно обновлен."
+      destroy:
+        delete: "Тест был успешно удален."
+      edit:
+        header: "Изменить тест"
+        back: "Назад"
+      new:
+        header: "Создать тест"
+        back: "Назад"
+      show:
+        header: "Тест"
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы теста"
+        new_question: "Создать вопрос"
+        body: "Содержание"
+        actions: "Действия"
+        back: "Назад"
+        edit: "Изменить"
+    questions:
+      question:
+        edit: "Изменить"
+        show: "Показать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+
+  users:
+    registrations:
+      form:
+        characters_minimum: "%{count} символов минимум"
+        registrate: "Зарегестрироваться"
+      new:
+        header: "Регистрация"
+        back: "Назад"
+    sessions:
+      form:
+        login: "Авторизоваться"
+      new:
+        header: "Войти"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"
