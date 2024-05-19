@@ -1,11 +1,20 @@
-<h1><%= t(".header") %></h1>
-
-<table>
-  <tr>
-    <th><%= t(".title") %></th>
-    <th><%= t(".level") %></th>
-    <th><%= t(".count") %></th>
-    <th><%= t(".actions") %></th>
-  </tr>
-  <%= render @tests %>
-</table>
+<div class="card border-primary">
+  <div class="card-header">
+    <h2 class="h2"><%= t(".header") %></h2>
+  </div>
+  <div class="card-body">
+    <table class="table table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th><%= t(".title") %></th>
+          <th><%= t(".level") %></th>
+          <th><%= t(".count") %></th>
+          <th><%= t(".actions") %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @tests %>
+      <tbody>
+    </table>
+  </div>
+</div>
