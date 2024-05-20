@@ -71,6 +71,9 @@ en:
       passed: "Test passed"
       failed: "Test failed"
       back: "Back"
+    gist:
+      succes: "Gist was succesfully created - %{url}"
+      failure: "An error occured while saving gist"
 
   admin:
     tests:
@@ -114,6 +117,12 @@ en:
         show: "Show"
         delete: "Delete"
         confirm: "Are you sure?"
+    gists:
+      index:
+        header: "Gists"
+        question: "Question"
+        link: "Link"
+        email: "E-mail"
 
   users:
     registrations:
@@ -138,4 +147,7 @@ en:
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
-      
+
+  gist_question:
+    description: "Question for test %{test_title}"
+          

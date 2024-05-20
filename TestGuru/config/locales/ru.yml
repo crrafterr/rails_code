@@ -71,6 +71,9 @@ ru:
       passed: "Тест пройден"
       failed: "Тест не пройден"
       back: "Назад"
+    gist:
+      success: "Gist успешно сохранен - %{url}"
+      failure: "Во время сохранения gist произошла ошибка"
   
   admin:
     tests:
@@ -114,6 +117,12 @@ ru:
         show: "Показать"
         delete: "Удалить"
         confirm: "Вы уверены?"
+    gists:
+      index:
+        header: "Список Gists"
+        question: "Вопрос"
+        link: "Ссылка"
+        email: "E-mail"
 
   users:
     registrations:
@@ -140,3 +149,6 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+  gist_question:
+    description: "Вопрос теста %{test_title}"
