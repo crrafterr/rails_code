@@ -289,7 +289,6 @@ DEPENDENCIES
   devise (~> 4.0)
   devise-i18n
   dotenv-rails
-  faraday
   jbuilder (~> 2.7)
   jquery-rails
   letter_opener

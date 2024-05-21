@@ -71,9 +71,6 @@ ru:
       passed: "Тест пройден"
       failed: "Тест не пройден"
       back: "Назад"
-    gist:
-      success: "Gist успешно сохранен - %{url}"
-      failure: "Во время сохранения gist произошла ошибка"
   
   admin:
     tests:
@@ -150,5 +147,8 @@ ru:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
 
-  gist_question:
+  gists:
+    create:
+      success: "Gist успешно сохранен - %{url}"
+      failure: "Во время сохранения gist произошла ошибка"
     description: "Вопрос теста %{test_title}"
