@@ -108,6 +108,8 @@ en:
         actions: "Actions"
         back: "Back"
         edit: "Edit"
+      form_inline:
+        submit: "ОК"
     questions:
       question:
         edit: "Edit"
