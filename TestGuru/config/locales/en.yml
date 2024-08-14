@@ -67,7 +67,7 @@ en:
       progress: "Question %{current_question_number} out of %{question_count}"
       submit: "Next"
     result:
-      header: "Test %{title} was succesfully completed!"
+      header: "Test %{title} was completed!"
       passed: "Test passed"
       failed: "Test failed"
       back: "Back"
@@ -138,6 +138,8 @@ en:
         header: "Log in"
 
   shared:
+    footer:
+      feedback: "Feedback"
     errors:
       header:
         one: "%{count} error detected"
@@ -152,4 +154,14 @@ en:
       succes: "Gist was succesfully created - %{url}"
       failure: "An error occured while saving gist"
     description: "Question for test %{test_title}"
- 
+  
+  feedbacks:
+    new:
+      header: "Feedback"
+    form:
+      name: "Name"
+      email: "Email"
+      body: "Message"
+      send: "Send"
+    create:
+      success: "Your message was successfully sent!"
