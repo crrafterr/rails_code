@@ -17,7 +17,7 @@ Category.destroy_all
 categories = Category.create!([{ title: 'Ruby' },
                                { title: 'Python' }])
 
-users = User.create!([{ first_name: 'Mike', last_name: 'Ivanov', type: 'Admin', email: 'ivanov@qq.qq', password: 'Qq123456', confirmed_at: Time.now },
+users = User.create!([{ first_name: 'Mike', last_name: 'Ivanov', type: 'Admin', email: 'crrafterr17@gmail.com', password: 'Qq123456', confirmed_at: Time.now },
                       { first_name: 'Tom', last_name: 'Petrov', email: 'petrov@qq.qq', password: 'Qq123456', confirmed_at: Time.now }])
 
 tests = Test.create!([{ title: 'Ruby_beginner', level: 1, category: categories[0], author: users[0] },
