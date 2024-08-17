@@ -179,6 +179,7 @@ ru:
     sessions:
       form:
         login: "Авторизоваться"
+        remember_me: "Запомнить"
       new:
         header: "Войти"
 

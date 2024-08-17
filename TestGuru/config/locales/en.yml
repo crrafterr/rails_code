@@ -177,6 +177,7 @@ en:
     sessions:
       form:
         login: "Log in"
+        remember_me: "Remember me"
       new:
         header: "Log in"
 
