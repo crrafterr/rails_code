@@ -35,21 +35,33 @@ ru:
   helpers:
     submit:
       test:
-        create: "Создать Тест"
-        update: "Обновить Тест"
+        create: "Создать"
+        update: "Обновить"
+      question: 
+        create: "Создать"
+        update: "Обновить"
+      answer: 
+        create: "Создать"
+        update: "Обновить"
     label:
       test:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+        author_id: "Автор"
       user:
         first_name: "Имя"
         last_name: "Фамилия"
         email: "Адрес электронной почты"
         password: "Пароль"
         password_confirmation: "Подтверждение пароля"
+      question:
+        body: "Вопрос"
+      answer:
+        body: "Ответ"
+        correct: "Правильный"
     select:
-      prompt: "Выберите категорию"
+      prompt: "Выберите"
 
   tests:
     index:
@@ -65,6 +77,7 @@ ru:
     show:
       header: "Прохождение теста %{test_name}"
       progress: "Вопрос номер %{current_question_number} из %{question_count}"
+      gist_question: "Отправить вопрос в gist"
       submit: "Следующий"
     result:
       header: "Тест %{title} завершен!"
@@ -116,13 +129,45 @@ ru:
         show: "Показать"
         delete: "Удалить"
         confirm: "Вы уверены?"
+      new:
+        header: "Создать вопрос для теста: %{test}"
+      edit:
+        header: "Редактировать вопрос для теста: %{test}"
+      show:
+        header: "Вопрос"
+        answers: "Ответы"
+        new_answers: "Новый ответ"
+        body: "Ответы"
+        actions: "Действия"
+        back: "Назад"
+        edit: "Редактировать"
     gists:
       index:
         header: "Список Gists"
         question: "Вопрос"
         link: "Ссылка"
         email: "E-mail"
-
+    answers:
+      answer:
+        edit: "Изменить"
+        show: "Показать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      new:
+        header: "Создать новый ответ"
+        back: "Назад"
+      show:
+        header: "Ответ на вопрос:"
+        answer: "Ответ:"
+        correct: "Правильный:"
+        back: "Назад"
+      edit:
+        header: "Редактировать ответ на вопрос:"
+        back: "Назад"
+    nav:
+      welcom: "Добро пожаловать"
+      guru: "гуру"
+      logout: "Выход"
   users:
     registrations:
       form:
@@ -139,13 +184,24 @@ ru:
 
   shared:
     footer:
+      project: "Проект: "
+      description: "Описание: Приложение для тестирования"
+      link: "Учебный проект в онлайн-школе Thinknetica"
       feedback: "Обратная связь"
+      year: "Год: "
     errors:
       header:
         few: "Обнаружено %{count} ошибки"
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+    nav:
+      welcom: "Добро пожаловать"
+      guru: "гуру"
+      adminpanel: "Панель администратора"
+      logout: "Выход"
+      login: "Вход"
+      signup: "Зарегестрироваться"
 
   tests_mailer:
     completed_test:

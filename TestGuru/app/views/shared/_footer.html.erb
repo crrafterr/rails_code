@@ -1,9 +1,9 @@
 <nav class="navbar fixed-bottom navbar-light bg-light">
   <footer>
-    <a class="navbar-text">Project: <%= github_url('crrafterr', 'rails_code') %> |
-     Description: Application for testing. |
-     <%= link_to  "Учебный проект в онлайн-школе Thinknetica", "https://thinknetica.com/", target: '_blank', rel: %w[nofollow noopener]%> | 
+    <a class="navbar-text"> <%= t(".project") %> <%= github_url('crrafterr', 'rails_code') %> |
+     <%= t(".description") %>|
+     <%= link_to t(".link"), "https://thinknetica.com/", target: '_blank', rel: %w[nofollow noopener]%> | 
      <%= link_to t('.feedback'), new_feedback_path %></a>
-    <p>Year: <%= current_year %></p>
+    <p><%= t(".year") %> <%= current_year %></p>
   </footer>
 </nav>
