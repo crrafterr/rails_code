@@ -6,7 +6,7 @@
           <div class="form-group">
             <p>
               <%= f.label :email %>
-              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', placeholder: 'Enter email' %>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
             </p>
      
             <p>
@@ -18,7 +18,7 @@
               <div class="form-check">
                 <%= f.label :remember_me, class: 'form—check-label' do %>
                  <%= f.check_box :remember_me, class: 'form—check—input' %>
-                 Remember me
+                 <%= t(".remember_me") %>
                 <% end %>
               </div>
             <% end -%>

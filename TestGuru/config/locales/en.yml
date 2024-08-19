@@ -35,21 +35,33 @@ en:
   helpers:
     submit:
       test:
-        create: "Create Test"
-        update: "Update Test"
+        create: "Create"
+        update: "Update"
+      question: 
+        create: "Create"
+        update: "Update"
+      answer: 
+        create: "Create"
+        update: "Update"
     label:
       test:
         title: "Title"
         level: "Level"
         category_id: "Category"
+        author_id: "Author"
       user:
         first_name: "First name"
         last_name: "Last name"
         email: "Email"
         password: "Password"
         password_confirmation: "Password confirmation"
+      question:
+        body: "Question"
+      answer:
+        body: "Answer"
+        correct: "Correct"
     select:
-      prompt: "Select category"
+      prompt: "Select"
 
   tests:
     index:
@@ -65,9 +77,10 @@ en:
     show:
       header: "Passing the %{test_name} test"
       progress: "Question %{current_question_number} out of %{question_count}"
+      gist_question: "Send question to gist"
       submit: "Next"
     result:
-      header: "Test %{title} was succesfully completed!"
+      header: "Test %{title} was completed!"
       passed: "Test passed"
       failed: "Test failed"
       back: "Back"
@@ -116,13 +129,43 @@ en:
         show: "Show"
         delete: "Delete"
         confirm: "Are you sure?"
+      new:
+        header: "Create question for test: %{test}"
+      edit:
+        header: "Edit question for test: %{test}"
+      show:
+        header: "Question"
+        answers: "Answers"
+        new_answers: "New answers"
+        body: "Answers"
+        actions: "Actions"
     gists:
       index:
         header: "Gists"
         question: "Question"
         link: "Link"
         email: "E-mail"
-
+    answers:
+      answer:
+        edit: "Edit"
+        show: "Show"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      new:
+        header: "Create new answer"
+        back: "Back"
+      show:
+        header: "Answer for question:"
+        answer: "Answer:"
+        correct: "Correct:"
+        back: "Back"
+      edit:
+        header: "Edit answer for question:"
+        back: "Back"
+      nav:
+        welcom: "Welcom"
+        guru: "Guru"
+        logout: "Logout"
   users:
     registrations:
       form:
@@ -134,14 +177,28 @@ en:
     sessions:
       form:
         login: "Log in"
+        remember_me: "Remember me"
       new:
         header: "Log in"
 
   shared:
+    footer:
+      project: "Project: "
+      description: "Description: Application for testing"
+      link: "Educational project in online school Thinknetica"
+      feedback: "Feedback"
+      year: "Year: "
     errors:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+    nav:
+      welcom: "Welcom"
+      guru: "Guru"
+      adminpanel: "Admin panel"
+      logout: "Logout"
+      login: "Login"
+      signup: "Signup"
 
   tests_mailer:
     completed_test:
@@ -152,4 +209,14 @@ en:
       succes: "Gist was succesfully created - %{url}"
       failure: "An error occured while saving gist"
     description: "Question for test %{test_title}"
- 
+  
+  feedbacks:
+    new:
+      header: "Feedback"
+    form:
+      name: "Name"
+      email: "Email"
+      body: "Message"
+      send: "Send"
+    create:
+      success: "Your message was successfully sent!"

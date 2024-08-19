@@ -28,4 +28,7 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  resources :feedbacks, only: :create
+  get 'feedbacks', to: 'feedbacks#new', as: 'new_feedback'
 end
