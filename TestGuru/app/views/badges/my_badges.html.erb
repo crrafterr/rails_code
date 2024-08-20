@@ -1,0 +1,13 @@
+<h1><%= t('.header') %></h1>
+
+<%= link_to t('.badges'), badges_path %>
+
+<table class='table'>
+  <tr>
+    <th><%= t('.name') %></th>
+    <th><%= t('.image_url') %></th>
+  </tr>
+  <%= render current_user.badges %>
+</table>
+
+<%= link_to t('.back'), root_path %>

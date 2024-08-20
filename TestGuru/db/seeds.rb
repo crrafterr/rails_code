@@ -13,6 +13,7 @@ Question.destroy_all
 Test.destroy_all
 User.destroy_all
 Category.destroy_all
+Badge.destroy_all
 
 categories = Category.create!([{ title: 'Ruby' },
                                { title: 'Python' }])
@@ -38,3 +39,7 @@ Answer.create!([{ body: 'colours = []',        correct: true,  question: questio
                 { body: 'a = {}',              correct: false, question: questions[2] },
                 { body: 'a = []',              correct: false, question: questions[3] },
                 { body: 'a = {}',              correct: true,  question: questions[3] }])
+
+Badge.create!([{ name: 'Passed the test on the first try', rule: 'first_try', value: '1', image_url: 'https://test.local/test.png' },
+               { name: 'All first category tests passed', rule: 'all_test_by_level', value: '1', image_url: 'https://test.local/test.png' },
+               { name: 'All Ruby tests passed', rule: 'ruby_category', value: 'Ruby', image_url: 'https://test.local/test.png' }])

@@ -1,5 +1,5 @@
 <%= t('.header', title: @test_passage.test.title) %>
-<% if @test_passage.passed? %>
+<% if @test_passage.passed %>
   <%= t('.passed') %> - <b class='success'><%= @test_passage.calculate_percentage %></b>%
 <%else%>
   <%= t('.failed') %> - <b class='fail'><%= @test_passage.calculate_percentage %></b>%

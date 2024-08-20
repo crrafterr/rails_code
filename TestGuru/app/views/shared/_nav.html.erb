@@ -3,8 +3,9 @@
   
   <span class="navbar-text">
     <% if user_signed_in? %>
-      <%= t(".welcom") %>, <b><%= current_user.email %></b> <%= t(".guru") %> |
+      <%= t(".welcom") %>, <b><%= current_user.email %></b> |
       <%= link_to_if(current_user.is_a?(Admin), t('.adminpanel'), { controller: "admin/tests", action: "index" }) %> |
+      <%= link_to t('.badges'), my_badges_path %> |
       <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to t('.login'), new_user_session_path %> |

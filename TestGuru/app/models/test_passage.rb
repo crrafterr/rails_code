@@ -22,7 +22,9 @@ class TestPassage < ApplicationRecord
   end
 
   def passed?
-    calculate_percentage >= PASSING_PERCENTAGE
+    self.passed = (calculate_percentage >= PASSING_PERCENTAGE)
+
+    save!
   end
 
   def current_question_number
