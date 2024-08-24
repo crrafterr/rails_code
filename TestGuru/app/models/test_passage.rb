@@ -22,7 +22,11 @@ class TestPassage < ApplicationRecord
   end
 
   def passed?
-    self.passed = (calculate_percentage >= PASSING_PERCENTAGE)
+    (calculate_percentage >= PASSING_PERCENTAGE)
+  end
+
+  def result
+    self.passed = passed?
 
     save!
   end

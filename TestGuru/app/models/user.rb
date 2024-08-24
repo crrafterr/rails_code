@@ -26,4 +26,12 @@ class User < ApplicationRecord
   def test_passage(test)
     test_passages.order(id: :desc).find_by(test_id: test.id)
   end
+
+  def user_success_tests
+    tests.where(test_passages: { passed: true })
+  end
+
+  def user_badges_by_rule(rule)
+    user_badges.joins(:badge).where(badge: { rule: rule })
+  end
 end

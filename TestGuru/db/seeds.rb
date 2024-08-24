@@ -40,6 +40,6 @@ Answer.create!([{ body: 'colours = []',        correct: true,  question: questio
                 { body: 'a = []',              correct: false, question: questions[3] },
                 { body: 'a = {}',              correct: true,  question: questions[3] }])
 
-Badge.create!([{ name: 'Passed the test on the first try', rule: 'first_try', value: '1', image_url: 'https://test.local/test.png' },
-               { name: 'All first category tests passed', rule: 'all_test_by_level', value: '1', image_url: 'https://test.local/test.png' },
+Badge.create!([{ name: 'Passed the test on the first try', rule: 'first_try?', value: '1', image_url: 'https://test.local/test.png' },
+               { name: 'All first category tests passed', rule: 'all_tests_by_level', value: '1', image_url: 'https://test.local/test.png' },
                { name: 'All Ruby tests passed', rule: 'ruby_category', value: 'Ruby', image_url: 'https://test.local/test.png' }])
