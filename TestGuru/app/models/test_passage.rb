@@ -35,6 +35,14 @@ class TestPassage < ApplicationRecord
     test.questions.ids.find_index(current_question.id) + 1
   end
 
+  def time_is_up?
+    (completion_time.to_i - Time.now.to_i).negative?
+  end
+
+  def completion_time
+    created_at + (test.timer * 60)
+  end
+
   private
 
   def set_first_question
@@ -42,6 +50,8 @@ class TestPassage < ApplicationRecord
   end
 
   def correct_answer?(answer_ids)
+    return false if answer_ids.nil?
+
     correct_answers.ids.sort == answer_ids.map(&:to_i).sort
   end
 
