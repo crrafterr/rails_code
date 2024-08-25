@@ -43,6 +43,8 @@ en:
       answer: 
         create: "Create"
         update: "Update"
+      badge:
+        create: "Create"
     label:
       test:
         title: "Title"
@@ -60,6 +62,11 @@ en:
       answer:
         body: "Answer"
         correct: "Correct"
+      badge:
+        name: "Name"
+        rule: "Rule"
+        value: "Value"
+        image_url: "Url address"
     select:
       prompt: "Select"
 
@@ -161,11 +168,32 @@ en:
         back: "Back"
       edit:
         header: "Edit answer for question:"
+        badges: "Badges"
         back: "Back"
       nav:
         welcom: "Welcom"
-        guru: "Guru"
         logout: "Logout"
+    badges:
+      create:
+        success: "Badge was succesfully created."
+      destroy:
+        success: "Badge was succesfully delete."
+      index:
+        header: "Badges"
+        create: "Create"
+        name: "Name"
+        rule: "Rule"
+        value: "Value"
+        image_url: "Url address"
+        action: "Action"
+        back: "Back"
+      badge:
+        delete: "Delete"
+        confirm: "Are you sure?"
+      new:
+        header: "Create badge"
+        back: "Back"
+
   users:
     registrations:
       form:
@@ -194,11 +222,11 @@ en:
         other: "%{count} errors detected"
     nav:
       welcom: "Welcom"
-      guru: "Guru"
       adminpanel: "Admin panel"
       logout: "Logout"
       login: "Login"
       signup: "Signup"
+      badges: "Badges"
 
   tests_mailer:
     completed_test:
@@ -220,3 +248,16 @@ en:
       send: "Send"
     create:
       success: "Your message was successfully sent!"
+  
+  badges:
+    index:
+      header: "Available badges"
+      my_badges: "My badges"
+      name: "Name"
+      image_url: "Url address"
+    my_badges:
+      header: "My badges"
+      badges: "Available badges"
+      name: "Name"
+      image_url: "Url address"
+      back: "Back"

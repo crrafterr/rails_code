@@ -12,6 +12,8 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :author_for_tests, class_name: 'Test', foreign_key: :author_id, dependent: :destroy
   has_many :gists, dependent: :destroy
+  has_many :user_badges, dependent: :destroy
+  has_many :badges, through: :user_badges
 
   validates :first_name, presence: true
   validates :last_name, presence: true
@@ -23,5 +25,13 @@ class User < ApplicationRecord
 
   def test_passage(test)
     test_passages.order(id: :desc).find_by(test_id: test.id)
+  end
+
+  def user_success_tests
+    tests.where(test_passages: { passed: true })
+  end
+
+  def user_badges_by_rule(rule)
+    user_badges.joins(:badge).where(badge: { rule: rule })
   end
 end
