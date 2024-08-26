@@ -11,7 +11,7 @@ class TestPassagesController < ApplicationController
   def update
     @test_passage.accept!(params[:answer_ids])
 
-    if @test_passage.completed? || @test_passage.time_is_up?
+    if @test_passage.completed?
       @test_passage.result
 
       AssignBadgesService.new(@test_passage).call
