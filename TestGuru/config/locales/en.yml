@@ -50,6 +50,7 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+        timer: "Timer"
         author_id: "Author"
       user:
         first_name: "First name"
@@ -76,6 +77,7 @@ en:
       title: "Title"
       level: "Level"
       count: "Count"
+      timer: "Timer"
       actions: "Actions"
     test:
       start: "Start"
@@ -102,8 +104,10 @@ en:
         title: "Title"
         level: "Level"
         count: "Count"
+        timer: "Timer" 
         actions: "Actions"
       test:
+        timer: "Timer"
         edit: "Edit"
         show: "Show"
         delete: "Delete"

@@ -8,7 +8,7 @@ class TestPassage < ApplicationRecord
   PASSING_PERCENTAGE = 85
 
   def completed?
-    current_question.nil?
+    current_question.nil? || time_is_up?
   end
 
   def accept!(answer_ids)
@@ -35,6 +35,14 @@ class TestPassage < ApplicationRecord
     test.questions.ids.find_index(current_question.id) + 1
   end
 
+  def time_is_up?
+    (completion_time.to_i - Time.now.to_i).negative?
+  end
+
+  def completion_time
+    created_at + (test.timer * 60)
+  end
+
   private
 
   def set_first_question
@@ -42,7 +50,7 @@ class TestPassage < ApplicationRecord
   end
 
   def correct_answer?(answer_ids)
-    correct_answers.ids.sort == answer_ids.map(&:to_i).sort
+    correct_answers.ids.sort == answer_ids.to_a.map(&:to_i).sort
   end
 
   def correct_answers
